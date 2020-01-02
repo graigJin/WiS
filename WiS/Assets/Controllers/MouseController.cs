@@ -7,11 +7,13 @@ public class MouseController : MonoBehaviour
 {
     public Material SelectionMaterial;
     public Canvas UserInterface;
+    public GameObject CameraArm;
 
     GameObject currentObject;
     Material currentMaterial;
     TextMeshProUGUI textMeshPro;
     float zoomSpeed = 1500.0f;
+    float mouseRotation = 0.0f;
 
     public GameObject CurrentObject { get => currentObject; set => currentObject = value; }
     public Material CurrentMaterial { get => currentMaterial; set => currentMaterial = value; }
@@ -62,6 +64,12 @@ public class MouseController : MonoBehaviour
             {
                 Debug.Log("No hit");
             }
+        }
+
+        if (Input.GetMouseButton(2))
+        {
+            mouseRotation = Input.GetAxis("Mouse Y");
+            CameraArm.transform.Rotate(mouseRotation, 0, 0, Space.Self);
         }
     }
 
