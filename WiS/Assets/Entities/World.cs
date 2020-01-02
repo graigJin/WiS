@@ -16,7 +16,6 @@ public class World
     {
         init(width, height);
         GenerateTiles();
-        ShowWorldStats();
     }
 
     void init(int width, int height) {
@@ -37,29 +36,13 @@ public class World
         }
     }
 
-    void ShowWorldStats()
+    public Tile GetTileAt(int x, int z)
     {
-        int emptyTiles = 0;
-        int grassTiles = 0;
-
-        for (int x = 0; x < Width; x++)
+        if (Tiles[x, z] == null)
         {
-            for (int z = 0; z < Height; z++)
-            {
-                Tile t = Tiles[x, z];
-                if (t.Type == Tile.TileType.Empty)
-                {
-                    emptyTiles++;
-                } 
-                else
-                {
-                    grassTiles++;
-                }
-            }
+            Debug.LogError("Tile at " + x + ", " + z + " not defined.");
+            return null;
         }
-
-        Debug.Log("World created with " + (emptyTiles + grassTiles) + " Tiles.");
-        Debug.Log("Empty: " + emptyTiles + " , Grass: " + grassTiles);
-
+        return Tiles[x, z];
     }
 }

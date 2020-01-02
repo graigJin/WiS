@@ -13,7 +13,12 @@ public class Tile
     public enum TileType
     {
         Empty,
-        Grass
+        Earth,
+        Grass,
+        Mud,
+        Sand,
+        Stone,
+        Water
     }
 
     int _x;
@@ -34,17 +39,11 @@ public class Tile
         Y = y;
         Z = z;
         World = world;
-        RandomizeTileType();
+        Type = DetermineTileType();
     }
 
-    void RandomizeTileType() {
-        if (Random.Range(0, 2) == 0) 
-        {
-            Type = TileType.Empty;
-        }
-        else
-        {
-            Type = TileType.Grass;
-        }
+    TileType DetermineTileType() {    
+        return (TileType) Random.Range(1, 7);
     }
+
 }

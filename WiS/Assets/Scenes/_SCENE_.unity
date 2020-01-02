@@ -187,8 +187,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115138334}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0.28000525, y: -0.008067012, z: 0.0023529415, w: -0.9599618}
+  m_LocalPosition: {x: 50.06445, y: 37.828705, z: -28.94918}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -223,6 +223,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f547bdbb11d67f941ade97fa95d302fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Earth: {fileID: 2306109934464132594, guid: 26a606215530673489838ba7a2db48d0, type: 3}
+  Grass: {fileID: 2162161628641056472, guid: 4b6adc0de7362b94e8704a86f8d94236, type: 3}
+  Mud: {fileID: 2306109934464132594, guid: 26e4d7af21ee7864f906653ed4078a9e, type: 3}
+  Sand: {fileID: 2306109934464132594, guid: 9775afec52899f44791e138f4eea606d, type: 3}
+  Stone: {fileID: 2162161628641056472, guid: 08126156afc02ea48b8657b1ab91a571, type: 3}
+  Water: {fileID: 2162161628641056472, guid: 08ce9214bc356fb41991b31a41281b2a, type: 3}
+  Empty: {fileID: 2306109934464132594, guid: fb83d817a81911946a0d6bc2283e7356, type: 3}
 --- !u!4 &1018769412
 Transform:
   m_ObjectHideFlags: 0
