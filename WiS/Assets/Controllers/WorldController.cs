@@ -26,7 +26,12 @@ public class WorldController : MonoBehaviour
         INSTANCE = this;
         WorldTileDictionary = new Dictionary<Tile, GameObject>();
 
-        World = new World(100, 100);
+        CreateWorld(100, 100);
+    }
+
+    void CreateWorld(int w, int h)
+    {
+        World = new World(w, h);
         CreateGameObjects();
     }
 
@@ -66,7 +71,7 @@ public class WorldController : MonoBehaviour
                         break;
                 }
 
-                gameObject.name = x + "|" + z + "\t\t" + t.Type;
+                gameObject.name = x + "|" + z + "\t" + t.Type;
                 WorldTileDictionary.Add(t, gameObject);
             }
         }
